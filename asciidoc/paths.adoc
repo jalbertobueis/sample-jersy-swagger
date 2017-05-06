@@ -1,0 +1,34 @@
+== Paths
+=== Return customer's name
+----
+GET /customer/{customer}
+----
+
+==== Description
+:hardbreaks:
+Return customer's nameeee
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|customer||true|string|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|Successful retrieval of user entity|object
+|404|User with given uuid does not exist|No Content
+|500|Internal server error|No Content
+|===
+
+==== Produces
+
+* application/json
+
+==== Tags
+
+* customer
+

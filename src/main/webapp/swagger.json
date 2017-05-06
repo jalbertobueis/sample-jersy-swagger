@@ -1,0 +1,62 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "This is a sample spec for our REST API",
+    "version" : "v1",
+    "title" : "Swagger spec for our REST API",
+    "termsOfService" : "http://www.carrefour.es",
+    "contact" : {
+      "name" : "Suresh Satyam",
+      "url" : "http://www.testcompany.com",
+      "email" : "SureshSatyam(@)testcompany.com"
+    },
+    "license" : {
+      "name" : "Company Licence",
+      "url" : "http://www.testcompany.com/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host" : "www.[host]:[port]",
+  "basePath" : "/poc/api",
+  "tags" : [ {
+    "name" : "customer",
+    "description" : "Endpoint for Customer specific operations"
+  } ],
+  "schemes" : [ "http", "https" ],
+  "paths" : {
+    "/customer/{customer}" : {
+      "get" : {
+        "tags" : [ "customer" ],
+        "summary" : "Return customer's name",
+        "description" : "Return customer's nameeee",
+        "operationId" : "getCustomer",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "customer",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful retrieval of user entity",
+            "schema" : {
+              "type" : "object",
+              "additionalProperties" : {
+                "type" : "string"
+              }
+            }
+          },
+          "404" : {
+            "description" : "User with given uuid does not exist"
+          },
+          "500" : {
+            "description" : "Internal server error"
+          }
+        },
+        "security" : [ {
+          "api_key" : [ ]
+        } ]
+      }
+    }
+  }
+}
