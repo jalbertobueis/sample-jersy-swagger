@@ -49,3 +49,6 @@ crashlytics.properties
 crashlytics-build.properties
 /.idea/
 /jersy-swagger.iml
+/target/
+src/main/resources/
+src/test/

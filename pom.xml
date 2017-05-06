@@ -115,7 +115,7 @@
             <version>0.9.3</version>
             <configuration>
                 <inputDirectory>src/main/webapp/</inputDirectory>
-                <swaggerFile>swagger.json</swaggerFile>
+                <swaggerFile>src/main/webapp/swagger.json</swaggerFile>
                 <outputDirectory>asciidoc</outputDirectory>
                 <markupLanguage>asciidoc</markupLanguage>
             </configuration>
@@ -128,6 +128,13 @@
                 </execution>
             </executions>
         </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.0.0</version>
+        </plugin>
+
     </plugins>
 
     <finalName>sample-jersy-swagger</finalName>
